@@ -1,18 +1,18 @@
 :root {
   --red-0: #2d2c33;
-  --red-1: #00FFFF;
-  --red-2: #fff98b;
+  --red-1: #0ff;
+  --red-2: #4d3900;
   --red-3: #b6adae;
-  --red-4: #26252a;
-  --red-5: #26252a;
-  --red-5-5: #26252a;
-  --red-6: #26252a;
+  --red-4: #777;
+  --red-5: #b6adae;
+  --red-5-5: #b6adae;
+  --red-6: #b6adae;
   --color-default-font: #000;
   --color-default: #555;
   --color-grey: #999;
   --color-border: var(--red-3);
   --color-link: var(--red-1);
-  --color-dark-link: #00FFFF;
+  --color-dark-link: #0cc;
   --color-background: #eee;
   --color-code-background: #f5f5f5;
   --color-sidebar-text: #777;
@@ -22,17 +22,18 @@
   --color-wrap: #fff;
   --color-twitter: #00aced;
   --color-facebook: #3b5998;
-  --color-pinterest: #cb2027;
+  --color-pinterest: #2d2c33;
   --color-linkedin: #0077b5;
   --color-dark-twitter: #008abe;
   --color-dark-facebook: #2f477a;
-  --color-dark-pinterest: #a21a1f;
+  --color-dark-pinterest: #242329;
   --color-dark-linkedin: #005f91;
+  --color-sticky: #ffecec;
   --color-h2-border: #eee;
   --color-meta-shadow: --var(--red-6);
-  --color-hover-shadow: rgba(150,150,150,0.1);
-  --color-h2-after: rgba(255,0,0,0.6);
-  --color-h2-after-shadow: rgba(255,78,106,0.7);
+  --color-hover-shadow: rgba(45,44,51,0.1);
+  --color-h2-after: rgba(253,241,72,0.6);
+  --color-h2-after-shadow: rgba(45,44,51,0.7);
   --highlight-nav: #e6e6e6;
   --highlight-scrollbar: #d6d6d6;
   --highlight-background: #f7f7f7;
@@ -40,7 +41,7 @@
   --highlight-selection: #e9e9e9;
   --highlight-foreground: #4d4d4d;
   --highlight-comment: #7d7d7d;
-  --highlight-red: #c8362b;
+  --highlight-red: #7d7d7d;
   --highlight-orange: #b66014;
   --highlight-yellow: #cb911d;
   --highlight-green: #2ea52e;
@@ -49,22 +50,22 @@
   --highlight-purple: #7135ac;
 }
 [data-theme="dark"]:root {
-  --red-0: #2d2c33;
-  --red-1: #2d2c33;
-  --red-2: #fff98b;
+  --red-0: #0ff;
+  --red-1: #0ff;
+  --red-2: #fbf6a2;
   --red-3: #b6adae;
-  --red-4: rgba(255,208,208,0.5);
-  --red-5: rgba(255,228,228,0.2);
-  --red-5-5: rgba(255,236,236,0.1);
-  --red-6: rgba(255,243,243,0.2);
+  --red-4: rgba(45,44,51,0.5);
+  --red-5: rgba(45,44,51,0.2);
+  --red-5-5: rgba(78,82,78,0.1);
+  --red-6: rgba(78,82,78,0.2);
   --color-default-font: #999;
   --color-default: #999;
   --color-grey: #999;
   --color-border: var(--red-5);
   --color-link: var(--red-1);
-  --color-dark-link: #2d2c33;
+  --color-dark-link: #0cc;
   --color-background: #21252b;
-  --color-code-background: rgba(232,232,232,0.2);
+  --color-code-background: rgba(33,37,43,0.2);
   --color-sidebar-text: #777;
   --color-header-background: #222;
   --color-footer-background: #21252b;
@@ -72,17 +73,18 @@
   --color-wrap: #272b30;
   --color-twitter: #00aced;
   --color-facebook: #3b5998;
-  --color-pinterest: #cb2027;
+  --color-pinterest: #2d2c33;
   --color-linkedin: #0077b5;
   --color-dark-twitter: #008abe;
   --color-dark-facebook: #2f477a;
-  --color-dark-pinterest: #a21a1f;
+  --color-dark-pinterest: #242329;
   --color-dark-linkedin: #005f91;
+  --color-sticky: #ffecec;
   --color-h2-border: #47474a;
   --color-meta-shadow: rgba(0,0,0,0.2);
   --color-hover-shadow: rgba(0,0,0,0.2);
-  --color-h2-after: #ff5252;
-  --color-h2-after-shadow: rgba(255,78,106,0.7);
+  --color-h2-after: #0ff;
+  --color-h2-after-shadow: rgba(45,44,51,0.7);
   --highlight-nav: #2e353f;
   --highlight-scrollbar: #454d59;
   --highlight-background: #22272e;
@@ -90,7 +92,7 @@
   --highlight-selection: #515151;
   --highlight-foreground: #ccc;
   --highlight-comment: #999;
-  --highlight-red: #f47067;
+  --highlight-red: #8b807a;
   --highlight-orange: #f69d50;
   --highlight-yellow: #fc6;
   --highlight-green: #9c9;
@@ -270,7 +272,7 @@ body:after {
   background-size: 20px 3px;
   background-repeat: repeat-x;
   border: none;
-  filter: drop-shadow(0px 0px 2px #2d2c33);
+  filter: drop-shadow(0px 0px 2px #f00);
 }
 @media screen and (max-width: 767px) {
   .article-entry hr {
@@ -698,7 +700,7 @@ a {
 }
 #subtitle {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 18px;
   letter-spacing: 1px;
 }
@@ -821,7 +823,7 @@ a {
   transform: rotate(360deg);
 }
 .main-nav-link {
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 1px;
 }
 .main-nav-icon {
@@ -896,7 +898,7 @@ a {
   background-image: linear-gradient(to left, var(--red-0) 50%, transparent 0%);
   background-size: 20px 3px;
   background-repeat: repeat-x;
-  filter: drop-shadow(0px 0px 2px #2d2c33);
+  filter: drop-shadow(0px 0px 2px #f00);
 }
 .article-inner {
   overflow: hidden;
@@ -1712,7 +1714,7 @@ a.article-title:hover {
   justify-content: flex-end;
   margin: 5px 0;
 }
-.post-meta a {
+.post-meta span {
   font-size: 14px;
   color: #777;
   margin: 0 8px;
@@ -1721,7 +1723,6 @@ a.article-title:hover {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.post-meta a:before,
 .post-meta span:before {
   margin: 0 10px;
 }
@@ -1862,7 +1863,7 @@ a.article-title:hover {
   left: 0;
   width: 70px;
   height: 35px;
-  background: var(--red-4);
+  background: var(--color-sticky);
   color: var(--red-1);
   font-weight: bold;
   font-size: 15px;
@@ -2114,8 +2115,8 @@ a.article-title:hover {
   background: var(--red-1);
   color: #fff;
   font-weight: bold;
-  -webkit-box-shadow: 0 2px 12px rgba(255,78,106,0.55);
-  box-shadow: 0 2px 12px rgba(255,78,106,0.55);
+  -webkit-box-shadow: 0 2px 12px rgba(78,81,78,0.55);
+  box-shadow: 0 2px 12px rgba(78,81,78,0.55);
 }
 @media screen and (max-width: 479px) {
   #page-nav .current {
@@ -2255,11 +2256,11 @@ a.article-title:hover {
   filter: alpha(opacity=30);
   width: 200%;
   height: 10px;
-  background-image: -webkit-linear-gradient(right, rgba(255,0,0,0.75) 50%, transparent 0%);
-  background-image: -moz-linear-gradient(right, rgba(255,0,0,0.75) 50%, transparent 0%);
-  background-image: -o-linear-gradient(right, rgba(255,0,0,0.75) 50%, transparent 0%);
-  background-image: -ms-linear-gradient(right, rgba(255,0,0,0.75) 50%, transparent 0%);
-  background-image: linear-gradient(to left, rgba(255,0,0,0.75) 50%, transparent 0%);
+  background-image: -webkit-linear-gradient(right, rgba(0,0,0,0.75) 50%, transparent 0%);
+  background-image: -moz-linear-gradient(right, rgba(0,0,0,0.75) 50%, transparent 0%);
+  background-image: -o-linear-gradient(right, rgba(0,0,0,0.75) 50%, transparent 0%);
+  background-image: -ms-linear-gradient(right, rgba(0,0,0,0.75) 50%, transparent 0%);
+  background-image: linear-gradient(to left, rgba(0,0,0,0.75) 50%, transparent 0%);
   background-size: 100px 10px;
   background-repeat: repeat-x;
   -webkit-transition: opacity 0.3s;
@@ -2278,7 +2279,7 @@ a.article-title:hover {
   -o-animation-timing-function: linear;
   -ms-animation-timing-function: linear;
   animation-timing-function: linear;
-  filter: drop-shadow(0px 0px 2px #2d2c33);
+  filter: drop-shadow(0px 0px 2px #f00);
 }
 #footer-info {
   line-height: 1.8em;
@@ -2338,12 +2339,12 @@ a.article-title:hover {
   opacity: 0.6;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
   filter: alpha(opacity=60);
-  background: url("/images/taichi.png") no-repeat center/80%;
-  -webkit-animation: rotate-all 3s infinite;
-  -moz-animation: rotate-all 3s infinite;
-  -o-animation: rotate-all 3s infinite;
-  -ms-animation: rotate-all 3s infinite;
-  animation: rotate-all 3s infinite;
+  background: url("/images/taichi-fill.png") no-repeat center/80%;
+  -webkit-animation: 0.5s linear 1s infinite alternate slidein;
+  -moz-animation: 0.5s linear 1s infinite alternate slidein;
+  -o-animation: 0.5s linear 1s infinite alternate slidein;
+  -ms-animation: 0.5s linear 1s infinite alternate slidein;
+  animation: 0.5s linear 1s infinite alternate slidein;
   -webkit-animation-timing-function: linear;
   -moz-animation-timing-function: linear;
   -o-animation-timing-function: linear;
@@ -2721,7 +2722,7 @@ pre .javascript .function {
   content: " ";
   position: absolute;
   border-radius: 50%;
-  background: #ff5f56;
+  background: #2d2c33;
   width: 12px;
   height: 12px;
   -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
@@ -2934,8 +2935,8 @@ pre .javascript .function {
   -o-transform: scale(1.015);
   -ms-transform: scale(1.015);
   transform: scale(1.015);
-  -webkit-box-shadow: 0 0 10px 3px rgba(255,0,0,0.1);
-  box-shadow: 0 0 10px 3px rgba(255,0,0,0.1);
+  -webkit-box-shadow: 0 0 10px 3px rgba(0,255,255,0.1);
+  box-shadow: 0 0 10px 3px rgba(0,255,255,0.1);
 }
 @media screen and (max-width: 767px) {
   .friend-item-wrap {
@@ -2952,6 +2953,7 @@ pre .javascript .function {
 .friend-icon-wrap {
   width: 100px;
   height: 100%;
+  pointer-events: none;
 }
 .friend-icon-wrap .friend-icon {
   height: 0;
@@ -3202,8 +3204,8 @@ pre .javascript .function {
   color: #fff;
   background: var(--red-1);
   font-weight: bold;
-  -webkit-box-shadow: 0 2px 6px rgba(255,78,106,0.55);
-  box-shadow: 0 2px 6px rgba(255,78,106,0.55);
+  -webkit-box-shadow: 0 2px 6px rgba(45,44,51,0.55);
+  box-shadow: 0 2px 6px rgba(45,44,51,0.55);
 }
 .reimu-pagination .disabled-item {
   display: none;
@@ -3362,7 +3364,7 @@ pre .javascript .function {
 .sidebar-author .sidebar-author-name {
   font-weight: bold;
   font-size: 20px;
-  color: #f77;
+  color: #777;
   margin: 10px;
 }
 .sidebar-author .sidebar-description {
@@ -3571,7 +3573,7 @@ pre .javascript .function {
   content: "\f0d2";
 }
 .icon-youtube {
-  color: #2d2c33;
+  color: #f00;
 }
 .icon-youtube:before {
   content: "\f167";
@@ -3713,7 +3715,7 @@ pre .javascript .function {
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  border: 10px rgba(255,0,0,0.3) double;
+  border: 10px rgba(0,0,0,0.3) double;
   border-radius: 10px;
   -webkit-transition: border 0.5s ease;
   -moz-transition: border 0.5s ease;
@@ -3757,8 +3759,8 @@ pre .javascript .function {
 .link-active {
   background: var(--red-0);
   border: 10px var(--color-wrap) double;
-  -webkit-box-shadow: 0 0 10px 3px rgba(255,0,0,0.3);
-  box-shadow: 0 0 10px 3px rgba(255,0,0,0.3);
+  -webkit-box-shadow: 0 0 10px 3px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px 3px rgba(0,0,0,0.3);
   opacity: 0.8;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
   filter: alpha(opacity=80);
