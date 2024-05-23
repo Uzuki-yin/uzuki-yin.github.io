@@ -55,10 +55,6 @@
   
   
   
-    
-<link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@v2/dist/waline.css">
-
-  
   
   
 <script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js"></script>
@@ -187,27 +183,35 @@
 
 
 
+  
+<script src="https://npm.webcache.cn/valine@1.5.1/dist/Valine.min.js" data-pjax></script>
 
-
-  <script data-pjax type="module">
-    import { init } from "https://npm.webcache.cn/@waline/client@v2/dist/waline.mjs";
-    if(document.querySelector('.wcomment')) {
-      init({
-        el: '.wcomment',
-        serverURL: 'https://ubo5npln.api.lncldglobal.com',
-        lang: 'zh-CN',
-        locale: {},
-        emoji: ["https://unpkg.com/@waline/emojis@1.2.0/tieba","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/tw-emoji"],
-        meta: ["nick","mail","link"],
-        requiredMeta: ["nick"],
-        wordLimit: JSON.parse('0'),
-        comment: true,
-        pageSize: JSON.parse('10'),
-        dark: 'html[data-theme="dark"]',
-        pageview: JSON.parse('true'),
+  <script data-pjax>
+    var GUEST_INFO = ['nick', 'mail', 'link'];
+    var guest_info = 'nick,mail,link'.split(',').filter((item) => {
+      return GUEST_INFO.indexOf(item) > -1
     });
-    }
+    var recordIP = JSON.parse('true');
+    var highlight = JSON.parse('true');
+    var visitor = JSON.parse('true');
+
+    new Valine({
+      el: '.vcomment',
+      appId: "UBo5nPLN7UE0fO5ODEFc766i-MdYXbMMI",
+      appKey: "5INZBFdqqvBZtuNnaNYM0z3F",
+      placeholder: "到底会发生什么……还请您亲自见证吧……",
+      pageSize: '6',
+      avatar: '',
+      lang: 'zh-cn',
+      recordIP: recordIP,
+      highlight: highlight,
+      visitor: visitor,
+      requiredFields: guest_info,
+      path: window.location.pathname
+    });
   </script>
+
+
 
 
 
